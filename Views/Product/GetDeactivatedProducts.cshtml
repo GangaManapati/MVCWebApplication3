@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "GetDeactivatedProducts";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
 }
 
 <h1>GetDeactivatedProducts</h1>
@@ -32,9 +32,11 @@
                 @Html.DisplayFor(modelItem => item.IsActive)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="UpdateProduct" asp-route-id="@item.Id" style="color: #007bff; text-decoration: none;">Edit</a> |
+                    <a asp-action="GetProductById" asp-route-id="@item.Id" style="color: #007bff; text-decoration: none;">Details</a> |
+                    <a asp-action="DeleteProduct" asp-route-id="@item.Id" style="color: #dc3545; text-decoration: none;">Delete</a> |
+                    <a asp-action="ActivateProduct" asp-route-id="@item.Id" style="color: #28a745; text-decoration: none;">Deactivate</a>
+
             </td>
         </tr>
 }

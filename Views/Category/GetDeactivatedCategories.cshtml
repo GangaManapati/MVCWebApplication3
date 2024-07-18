@@ -7,9 +7,8 @@
 <h1>GetDeactivatedCategories</h1>
 
 <p>
-    <a asp-action="GetActiveCategories">GetAllActiveCategories</a> <br/>
     
-    <a asp-action="Create">Create New</a>
+    <a asp-action="CreateCategory">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -33,10 +32,11 @@
                 @Html.DisplayFor(modelItem => item.IsActive)
             </td>
             <td>
-                    <a asp-action="UpdateCategory" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="GetCategoryById" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="DeleteCategory" asp-route-id="@item.Id">Delete</a>
-
+                    <a asp-action="UpdateCategory" asp-route-id="@item.Id" style="color: #007bff; text-decoration: none;">Edit</a> |
+                    <a asp-action="GetCategoryById" asp-route-id="@item.Id" style="color: #007bff; text-decoration: none;">Details</a> |
+                    <a asp-action="DeleteCategory" asp-route-id="@item.Id" style="color: #dc3545; text-decoration: none;">Delete</a> |
+                    <a asp-action="ActivateCategory" asp-route-id="@item.Id" style="color: #28a745; text-decoration: none;">Activate</a> 
+                    
             </td>
         </tr>
 }

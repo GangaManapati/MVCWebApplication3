@@ -2,15 +2,13 @@
 
 @{
     ViewData["Title"] = "GetCategories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>GetCategories</h1>
 
 <p>
-   
-    <a asp-action="GetActiveCategories">GetAllActiveCategories</a> |
-    <a asp-action="GetDeactivatedCategories">GetAllDeactiveCategories</a><br/><br/>
-    <a asp-action="CreateCategory">Create New</a> 
+    <a asp-action="CreateCategory">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -34,11 +32,12 @@
                 @Html.DisplayFor(modelItem => item.IsActive)
             </td>
             <td>
-                    <a asp-action="UpdateCategory" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="GetCategoryById" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="DeleteCategory" asp-route-id="@item.Id">Delete</a>|
-                    <a asp-action="ActivateCategory" asp-route-id="@item.Id">Activate</a> |
-                    <a asp-action="DeactivateCategory" asp-route-id="@item.Id">Deactivate</a>
+                    <a asp-action="UpdateCategory" asp-route-id="@item.Id" style="color: #007bff; text-decoration: none;">Edit</a> |
+                    <a asp-action="GetCategoryById" asp-route-id="@item.Id" style="color: #007bff; text-decoration: none;">Details</a> |
+                    <a asp-action="DeleteCategory" asp-route-id="@item.Id" style="color: #dc3545; text-decoration: none;">Delete</a> |
+                    <a asp-action="ActivateCategory" asp-route-id="@item.Id" style="color: #28a745; text-decoration: none;">Activate</a> |
+                    <a asp-action="DeactivateCategory" asp-route-id="@item.Id" style="color: #dc3545; text-decoration: none;">Deactivate</a>
+
             </td>
         </tr>
 }

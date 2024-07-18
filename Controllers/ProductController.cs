@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 namespace MVCWebApplication3.Controllers
 {
     [Route("Product/[Action]")]
-    public class ProductsController : Controller
+    public class ProductController : Controller
     {
         private readonly IProductRepository _productRepository;
         private readonly ICategoryRepository _categorRepository;
 
-        public ProductsController(IProductRepository productRepository, ICategoryRepository categorRepository)
+        public ProductController(IProductRepository productRepository, ICategoryRepository categorRepository)
         {
             _productRepository = productRepository;
             _categorRepository = categorRepository;
@@ -125,7 +125,7 @@ namespace MVCWebApplication3.Controllers
         public async Task<ActionResult<List<Product>>> GetActiveProducts(int pageNumber = 1, int pageSize = 1111)
         {
             var products = await _productRepository.GetAllActivateProductAsync(pageNumber, pageSize);
-            return View("GetProducts", products);
+            return View(products);
         }
 
         // GET: /Product/GetDeactivatedProducts?pageNumber=1&pageSize=1111
@@ -133,7 +133,7 @@ namespace MVCWebApplication3.Controllers
         public async Task<ActionResult<List<Product>>> GetDeactivatedProducts(int pageNumber = 1, int pageSize = 1111)
         {
             var products = await _productRepository.GetAllDeactiveProAsync(pageNumber, pageSize);
-            return View("GetProducts", products);
+            return View(products);
         }
 
         // GET: /Product/ActivateProduct/3

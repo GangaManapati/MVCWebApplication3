@@ -248,7 +248,6 @@ C:\Users\Nimap\source\repos\MVCWebApplication3\MVCWebApplication3\bin\Debug\net8
 C:\Users\Nimap\source\repos\MVCWebApplication3\MVCWebApplication3\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\Nimap\source\repos\MVCWebApplication3\MVCWebApplication3\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Nimap\source\repos\MVCWebApplication3\MVCWebApplication3\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
-C:\Users\Nimap\source\repos\MVCWebApplication3\MVCWebApplication3\obj\Debug\net8.0\MVCWebApplication3.sourcelink.json
 C:\Users\Nimap\source\repos\MVCWebApplication3\MVCWebApplication3\bin\Debug\net8.0\EntityFramework.SqlServer.dll
 C:\Users\Nimap\source\repos\MVCWebApplication3\MVCWebApplication3\bin\Debug\net8.0\EntityFramework.dll
 C:\Users\Nimap\source\repos\MVCWebApplication3\MVCWebApplication3\bin\Debug\net8.0\System.Data.SqlClient.dll

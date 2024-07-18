@@ -2,12 +2,11 @@
 
 @{
     ViewData["Title"] = "GetProducts";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
 }
 
 <h1>GetProducts</h1>
-<a asp-action="GetActiveProducts">Active Products</a>  |
-<a asp-action="GetDeactivedProducts">Deactive Products</a>
+
 <p>
     <a asp-action="CreateProduct">Create New</a>
 </p>
@@ -32,13 +31,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.IsActive)
             </td>
-            <td>
-                    <a asp-action="UpdateProduct" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="GetProductById" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="DeleteProduct" asp-route-id="@item.Id">Delete</a>|
-                    <a asp-action="ActivateProduct" asp-route-id="@item.Id">Activate</a> |
-                    <a asp-action="DeactivateProduct" asp-route-id="@item.Id">Deactivate</a>
-            </td>
+                <td>
+                    <a asp-action="UpdateProduct" asp-route-id="@item.Id" style="color: #007bff; text-decoration: none;">Edit</a> |
+                    <a asp-action="GetProductById" asp-route-id="@item.Id" style="color: #007bff; text-decoration: none;">Details</a> |
+                    <a asp-action="DeleteProduct" asp-route-id="@item.Id" style="color: #dc3545; text-decoration: none;">Delete</a> |
+                    <a asp-action="DeactivateProduct" asp-route-id="@item.Id" style="color: #28a745; text-decoration: none;">Deactivate</a>|
+                    <a asp-action="ActivateProduct" asp-route-id="@item.Id" style="color: #28a745; text-decoration: none;">Activate</a>
+
+                </td>
         </tr>
 }
     </tbody>

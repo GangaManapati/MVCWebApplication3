@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "GetProductById";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
 }
 
 <h1>GetProductById</h1>
@@ -27,5 +27,8 @@
 </div>
 <div>
     <a asp-action="UpdateProduct" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="DeleteProduct" asp-route-id="@Model?.Id">Delete</a> |
+    <a asp-action="ActivateProduct" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="DeactivateProduct" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="GetProducts">Back to List</a>
 </div>
